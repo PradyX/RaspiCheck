@@ -31,6 +31,6 @@
         android:id="@+id/menu_continue"
         app:showAsAction="always|withText"
         android:title="@string/new_raspi_continue"
-        android:icon="?attr/ic_action_next" />
+        android:icon="@drawable/ic_arrow_right" />
 
 </menu>
