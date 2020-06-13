@@ -37,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/commandButton"
@@ -58,529 +58,603 @@
                 app:iconTint="@color/colorPrimary"
                 app:strokeColor="@color/colorPrimary" />
 
-            <TextView
-                android:id="@+id/headerTextOverclock"
-                android:layout_width="match_parent"
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="HW Monitoring"
-                android:textAllCaps="true"
-                android:textStyle="bold" />
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/coreTempLabel"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/core_temp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/coreTempText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/coreTempLabel"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/coreTempLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/core_temp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <TextView
-                    android:id="@+id/armFreqLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/arm_freq"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        <TextView
+                            android:id="@+id/coreTempText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/coreTempLabel"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/armFreqText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/armFreqLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/armFreqLabel"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/armFreqLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arm_freq"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/armFreqText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/armFreqLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/armFreqLabel"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp">
+
+                        <TextView
+                            android:id="@+id/coreFreqLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/core_freq"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/coreFreqText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/coreFreqLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/coreFreqLabel"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/coreVoltLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/core_volt"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/coreVoltText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/coreVoltLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/coreVoltLabel"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/firmwareLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firmware_version"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/firmwareText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/firmwareLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/firmwareLabel"
+                            android:ellipsize="marquee"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:singleLine="true"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/headerTextOverclock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="HW Monitoring"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="2dp">
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
 
-                <TextView
-                    android:id="@+id/coreFreqLabel"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/core_freq"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/coreFreqText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/coreFreqLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/coreFreqLabel"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/headerTextSystem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/system_header"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/coreVoltLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/core_volt"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        <TextView
+                            android:id="@+id/startedLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/uptime_started"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-                <TextView
-                    android:id="@+id/coreVoltText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/coreVoltLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/coreVoltLabel"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                        <TextView
+                            android:id="@+id/uptimeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/startedLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/startedLabel"
+                            android:gravity="right"
+                            android:paddingLeft="8dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/systemtimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/firmwareLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/firmware_version"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        <TextView
+                            android:id="@+id/systemtimeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/systemtime"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-                <TextView
-                    android:id="@+id/firmwareText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/firmwareLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/firmwareLabel"
-                    android:ellipsize="marquee"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:singleLine="true"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                        <TextView
+                            android:id="@+id/systemtimeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/systemtimeLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
 
-            <TextView
-                android:id="@+id/headerTextSystem"
-                android:layout_width="match_parent"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/loadLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/average_load"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/averageLoadText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/loadLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/loadLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/totalMemLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/total_memory"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/totalMemoryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/totalMemLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/totalMemLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/totalSwapLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/total_swap"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/totalSwapText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/totalSwapLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/totalSwapLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/distriLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/distribution"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/distriText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/distriLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/distriLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/cpuSerialLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/cpu_serial"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/cpuSerialText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/cpuSerialLabel"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/cpuSerialLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lastUpdateLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="@string/last_update"
+                            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                        <TextView
+                            android:id="@+id/lastUpdateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/lastUpdateLabel"
+                            android:gravity="right"
+                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/system_header"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/startedLabel"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/uptime_started"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/uptimeText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/startedLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/startedLabel"
-                    android:gravity="right"
-                    android:paddingLeft="8dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/headerTextNetwork"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/network_header"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
 
-            <RelativeLayout
-                android:id="@+id/systemtimeLayout"
-                android:layout_width="match_parent"
+                    <TableLayout
+                        android:id="@+id/networkTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="0">
+
+                        <TableRow
+                            android:id="@+id/networkRow1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp">
+
+                            <TextView
+                                android:id="@+id/networkHeader1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/network_interface"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                            <TextView
+                                android:id="@+id/networkHeader2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/network_status"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                            <TextView
+                                android:id="@+id/networkHeader3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/network_ip"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                            <TextView
+                                android:id="@+id/networkHeader4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/network_signal"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                            <TextView
+                                android:id="@+id/networkHeader5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/network_link"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone">
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
 
-                <TextView
-                    android:id="@+id/systemtimeLabel"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/systemtime"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/systemtimeText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/systemtimeLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/headerTextDisk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/disk_header"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    <TableLayout
+                        android:id="@+id/diskTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="4">
 
-                <TextView
-                    android:id="@+id/loadLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/average_load"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp">
 
-                <TextView
-                    android:id="@+id/averageLoadText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/loadLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/loadLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/tableHeader1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/disk_header_filesystem"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tableHeader2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/disk_header_size"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-                <TextView
-                    android:id="@+id/totalMemLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/total_memory"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+                            <TextView
+                                android:id="@+id/tableHeader3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/disk_header_avail"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-                <TextView
-                    android:id="@+id/totalMemoryText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/totalMemLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/totalMemLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/tableHeader4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/disk_header_usedper"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tableHeader5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="6dp"
+                                android:text="@string/disk_header_mounted_on"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/totalSwapLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/total_swap"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                <TextView
-                    android:id="@+id/totalSwapText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/totalSwapLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/totalSwapLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/distriLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/distribution"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                <TextView
-                    android:id="@+id/distriText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/distriLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/distriLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/cpuSerialLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/cpu_serial"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                <TextView
-                    android:id="@+id/cpuSerialText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/cpuSerialLabel"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/cpuSerialLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/lastUpdateLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:text="@string/last_update"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                <TextView
-                    android:id="@+id/lastUpdateText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/lastUpdateLabel"
-                    android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceSmall"/>
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/headerTextNetwork"
-                android:layout_width="match_parent"
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/network_header"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
 
-            <TableLayout
-                android:id="@+id/networkTable"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="0">
-
-                <TableRow
-                    android:id="@+id/networkRow1"
-                    android:layout_width="fill_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="3dp">
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
                     <TextView
-                        android:id="@+id/networkHeader1"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/headerTextProcesses"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/network_interface"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        android:gravity="center_horizontal"
+                        android:text="@string/process_header"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/networkHeader2"
-                        android:layout_width="wrap_content"
+                    <TableLayout
+                        android:id="@+id/processTable"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/network_status"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        android:stretchColumns="3">
 
-                    <TextView
-                        android:id="@+id/networkHeader3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/network_ip"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+                        <TableRow
+                            android:id="@+id/tableRow2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp">
 
-                    <TextView
-                        android:id="@+id/networkHeader4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/network_signal"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
+                            <TextView
+                                android:id="@+id/tableHeaderPID"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="8dp"
+                                android:text="@string/header_pid"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-                    <TextView
-                        android:id="@+id/networkHeader5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/network_link"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-                </TableRow>
-            </TableLayout>
+                            <TextView
+                                android:id="@+id/tableHeader2TTY"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="8dp"
+                                android:text="@string/header_tty"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-            <TextView
-                android:id="@+id/headerTextDisk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/disk_header"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/tableHeader3CPU"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="8dp"
+                                android:text="@string/header_cpu_time"
+                                android:textAppearance="?android:attr/textAppearanceSmall"/>
 
-            <TableLayout
-                android:id="@+id/diskTable"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="4">
-
-                <TableRow
-                    android:id="@+id/tableRow1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="3dp">
-
-                    <TextView
-                        android:id="@+id/tableHeader1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/disk_header_filesystem"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/disk_header_size"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/disk_header_avail"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/disk_header_usedper"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="6dp"
-                        android:text="@string/disk_header_mounted_on"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-                </TableRow>
-            </TableLayout>
-
-            <TextView
-                android:id="@+id/headerTextProcesses"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/process_header"
-                android:textAllCaps="true"
-                android:textStyle="bold"/>
-
-            <TableLayout
-                android:id="@+id/processTable"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="3">
-
-                <TableRow
-                    android:id="@+id/tableRow2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="3dp">
-
-                    <TextView
-                        android:id="@+id/tableHeaderPID"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="8dp"
-                        android:text="@string/header_pid"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader2TTY"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="8dp"
-                        android:text="@string/header_tty"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader3CPU"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="8dp"
-                        android:text="@string/header_cpu_time"
-                        android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-                    <TextView
-                        android:id="@+id/tableHeader4CMD"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="8dp"
-                        android:text="@string/header_command"
-                        android:textAppearance="?android:attr/textAppearanceSmall" />
-                </TableRow>
-            </TableLayout>
+                            <TextView
+                                android:id="@+id/tableHeader4CMD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="8dp"
+                                android:text="@string/header_command"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
