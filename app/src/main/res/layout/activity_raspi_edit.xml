@@ -41,26 +41,12 @@
         android:showDividers="beginning|middle|end"
         tools:context=".NewRaspiActivity">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edit_raspi_name_editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/raspi_device_name_hint"
-                android:inputType="text|textNoSuggestions"
-                android:maxLines="1"/>
-        </android.support.design.widget.TextInputLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -73,11 +59,11 @@
                     android:ems="10"
                     android:hint="@string/raspi_device_host_hint"
                     android:inputType="text|textNoSuggestions"
-                    android:maxLines="1"/>
+                    android:maxLines="1" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/port_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -91,65 +77,10 @@
                     android:inputType="number"
                     android:maxLines="1"
                     android:minEms="3"
-                    android:text="@string/default_ssh_port"/>
+                    android:text="@string/default_ssh_port" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/edit_raspi_user_editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/labelUser"
-                android:ems="10"
-                android:hint="@string/raspi_device_user_hint"
-                android:inputType="text|textNoSuggestions"
-                android:maxLines="1"
-                android:paddingTop="8dp"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
-
-            <TextView
-                android:id="@+id/textAuthMethod"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:text="@string/new_raspi_auth_method"
-                android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-            <Spinner
-                android:id="@+id/spinnerAuthMethod"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textAuthMethod"/>
-
-        </RelativeLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/ssh_password_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/ssh_password_edit_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/raspi_device_password_hint"
-                android:inputType="textPassword">
-
-            </EditText>
-        </android.support.design.widget.TextInputLayout>
 
         <RelativeLayout
             android:id="@+id/rel_key"
@@ -181,7 +112,7 @@
                 android:onClick="onCheckboxClick"
                 android:text="@string/raspi_key_checkbox_text"/>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/key_password_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -194,9 +125,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/raspi_key_password_hint"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
 
         <RelativeLayout
@@ -205,7 +136,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="8dp">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -216,11 +147,80 @@
                     android:ems="10"
                     android:hint="@string/raspi_device_sudo_password_hint"
                     android:inputType="text|textPassword"
-                    android:maxLines="1"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <Spinner
+                android:id="@+id/spinnerAuthMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textAuthMethod" />
+
+            <TextView
+                android:id="@+id/textAuthMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/new_raspi_auth_method"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ssh_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/ssh_password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/raspi_device_password_hint"
+                android:inputType="textPassword">
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_raspi_name_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/raspi_device_name_hint"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_raspi_user_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelUser"
+                android:ems="10"
+                android:hint="@string/raspi_device_user_hint"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingTop="8dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -231,8 +231,8 @@
                 android:ems="10"
                 android:hint="@string/new_raspi_description"
                 android:inputType="textMultiLine"
-                android:paddingTop="8dp"/>
-        </android.support.design.widget.TextInputLayout>
+                android:paddingTop="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 </ScrollView>

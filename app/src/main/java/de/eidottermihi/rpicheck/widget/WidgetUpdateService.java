@@ -24,12 +24,12 @@
 package de.eidottermihi.rpicheck.widget;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v4.app.JobIntentService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.JobIntentService;
 import de.eidottermihi.rpicheck.activity.helper.LoggingHelper;
 import de.eidottermihi.rpicheck.db.DeviceDbHelper;
 

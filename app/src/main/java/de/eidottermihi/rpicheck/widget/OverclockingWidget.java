@@ -35,12 +35,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import androidx.core.content.ContextCompat;
 import de.eidottermihi.rpicheck.activity.SettingsActivity;
 import de.eidottermihi.rpicheck.activity.helper.FormatHelper;
 import de.eidottermihi.rpicheck.activity.helper.LoggingHelper;

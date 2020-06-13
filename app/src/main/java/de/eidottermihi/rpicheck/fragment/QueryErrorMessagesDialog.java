@@ -31,12 +31,12 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.webkit.WebView;
 
 import java.util.List;
 
+import androidx.fragment.app.DialogFragment;
 import de.eidottermihi.raspicheck.R;
 
 /**

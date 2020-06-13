@@ -31,7 +31,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -42,6 +41,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.common.base.Strings;
 
 import org.slf4j.Logger;

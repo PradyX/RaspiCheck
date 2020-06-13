@@ -23,13 +23,13 @@
  */
 package de.eidottermihi.rpicheck.activity.helper;
 
-import android.support.annotation.Nullable;
-
 import com.nononsenseapps.filepicker.AbstractFilePickerActivity;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
 import com.nononsenseapps.filepicker.FilePickerFragment;
 
 import java.io.File;
+
+import androidx.annotation.Nullable;
 
 /**
  * Extends {@link AbstractFilePickerActivity} to show hidden folders (like .ssh).

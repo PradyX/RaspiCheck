@@ -29,7 +29,6 @@ import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.DialogFragment;
 import android.text.Layout;
 import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
@@ -44,6 +43,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
+import androidx.fragment.app.DialogFragment;
 import de.eidottermihi.raspicheck.R;
 import de.eidottermihi.rpicheck.db.CommandBean;
 import de.eidottermihi.rpicheck.db.RaspberryDeviceBean;

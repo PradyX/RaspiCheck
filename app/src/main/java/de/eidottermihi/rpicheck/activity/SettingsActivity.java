@@ -31,7 +31,6 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceManager;
-import android.support.v4.content.FileProvider;
 import android.widget.Toast;
 
 import org.slf4j.Logger;
@@ -39,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
+import androidx.core.content.FileProvider;
 import de.eidottermihi.raspicheck.BuildConfig;
 import de.eidottermihi.raspicheck.R;
 import de.eidottermihi.rpicheck.activity.helper.LoggingHelper;

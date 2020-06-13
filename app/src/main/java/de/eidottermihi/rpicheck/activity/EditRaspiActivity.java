@@ -26,8 +26,6 @@ package de.eidottermihi.rpicheck.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,11 +38,13 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.common.base.Strings;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import androidx.core.app.NavUtils;
 import de.eidottermihi.raspicheck.R;
 import de.eidottermihi.rpicheck.activity.helper.Constants;
 import de.eidottermihi.rpicheck.activity.helper.Validation;
