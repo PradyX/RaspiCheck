@@ -28,7 +28,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -39,24 +39,22 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
-            <Button
-                android:id="@+id/commandButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onCommandButtonClick"
-                android:text="@string/button_commands"
-                android:visibility="gone"
-                />
-
             <TextView
                 android:id="@+id/headerTextOverclock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/overclocking_header"
+                android:text="HW Monitoring"
                 android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/commandButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onCommandButtonClick"
+                android:text="@string/button_commands"
+                android:visibility="visible" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -187,7 +185,6 @@
                 android:gravity="center_horizontal"
                 android:text="@string/system_header"
                 android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"/>
 
             <RelativeLayout
@@ -398,7 +395,6 @@
                 android:gravity="center_horizontal"
                 android:text="@string/network_header"
                 android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"/>
 
             <TableLayout
@@ -462,7 +458,6 @@
                 android:gravity="center_horizontal"
                 android:text="@string/disk_header"
                 android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"/>
 
             <TableLayout
@@ -526,7 +521,6 @@
                 android:gravity="center_horizontal"
                 android:text="@string/process_header"
                 android:textAllCaps="true"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"/>
 
             <TableLayout
@@ -576,6 +570,6 @@
             </TableLayout>
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

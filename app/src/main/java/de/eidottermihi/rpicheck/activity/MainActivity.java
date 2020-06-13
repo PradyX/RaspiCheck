@@ -41,7 +41,6 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.SpinnerAdapter;
 import android.widget.TableLayout;
@@ -49,6 +48,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.common.base.Strings;
 
 import org.slf4j.Logger;
@@ -115,7 +115,7 @@ public class MainActivity extends InjectionAppCompatActivity implements
     private static boolean isOnBackground;
 
     @InjectView(R.id.commandButton)
-    private Button commandButton;
+    private MaterialButton commandButton;
     @InjectView(R.id.armFreqText)
     private TextView armFreqText;
     @InjectView(R.id.coreFreqText)
