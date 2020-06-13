@@ -168,7 +168,6 @@ public class MainActivity extends InjectionAppCompatActivity implements
         sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         LoggingHelper.initLogging(this);
-
         // assigning refreshable root scrollview
         initSwipeRefreshLayout();
 

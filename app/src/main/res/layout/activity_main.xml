@@ -26,6 +26,7 @@
 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
@@ -39,6 +40,24 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/commandButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:onClick="onCommandButtonClick"
+                android:text="Run a Command"
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible"
+                app:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_terminals"
+                app:iconTint="@color/colorPrimary"
+                app:strokeColor="@color/colorPrimary" />
+
             <TextView
                 android:id="@+id/headerTextOverclock"
                 android:layout_width="match_parent"
@@ -47,14 +66,6 @@
                 android:text="HW Monitoring"
                 android:textAllCaps="true"
                 android:textStyle="bold" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/commandButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="onCommandButtonClick"
-                android:text="@string/button_commands"
-                android:visibility="visible" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
