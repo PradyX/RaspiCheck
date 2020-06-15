@@ -71,6 +71,14 @@
                     android:orientation="vertical"
                     android:padding="5dp">
 
+                    <TextView
+                        android:id="@+id/headerTextOverclock"
+                        style="@style/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="HW Monitoring" />
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -192,15 +200,6 @@
                             android:singleLine="true"
                             android:textAppearance="?android:attr/textAppearanceSmall" />
                     </RelativeLayout>
-
-                    <TextView
-                        android:id="@+id/headerTextOverclock"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="HW Monitoring"
-                        android:textAllCaps="true"
-                        android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -223,8 +222,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/system_header"
-                        android:textAllCaps="true"
-                        android:textStyle="bold" />
+                        style="@style/heading" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -448,8 +446,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/network_header"
-                        android:textAllCaps="true"
-                        android:textStyle="bold" />
+                        style="@style/heading" />
 
                     <TableLayout
                         android:id="@+id/networkTable"
@@ -526,8 +523,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/disk_header"
-                        android:textAllCaps="true"
-                        android:textStyle="bold" />
+                        style="@style/heading" />
 
                     <TableLayout
                         android:id="@+id/diskTable"
@@ -604,8 +600,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/process_header"
-                        android:textAllCaps="true"
-                        android:textStyle="bold" />
+                        style="@style/heading" />
 
                     <TableLayout
                         android:id="@+id/processTable"
