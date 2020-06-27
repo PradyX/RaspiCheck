@@ -31,13 +31,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.common.base.Strings;
 
@@ -78,7 +78,7 @@ public class NewRaspiAuthActivity extends AbstractFileChoosingActivity implement
     @InjectView(R.id.key_password_edit_text)
     private EditText editTextKeyfilePass;
     @InjectView(R.id.buttonKeyfile)
-    private Button buttonKeyfile;
+    private MaterialButton buttonKeyfile;
     @InjectView(R.id.edit_raspi_ssh_port_editText)
     private EditText editTextSshPort;
     @InjectView(R.id.edit_raspi_sudoPass_editText)
