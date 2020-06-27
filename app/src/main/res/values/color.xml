@@ -4,4 +4,5 @@
     <color name="colorPrimary">@color/material_pink_500</color>
     <color name="colorPrimaryDark">@color/material_pink_800</color>
     <color name="colorAccent">@color/material_green_500</color>
+<!--    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@android:color/darker_gray</color>-->
 </resources>

@@ -109,7 +109,7 @@ public class NetworkInterfacesTest extends AbstractMockedQueryTest {
     @Test
     public void wlan_signal_percentage() throws IOException, RaspiQueryException {
         String iwconfigOutput = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/iwconfig_percentage.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/iwconfig_percentage.txt"));
         sessionMocker.withCommand("ls -1 /sys/class/net", new CommandMocker()
                 .withResponse("lo\nwlp2s0").mock());
         sessionMocker.withCommand("cat /sys/class/net/wlp2s0/carrier",
@@ -136,7 +136,7 @@ public class NetworkInterfacesTest extends AbstractMockedQueryTest {
     @Test
     public void wlan_signal_dbm() throws IOException, RaspiQueryException {
         String iwconfigOutput = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/iwconfig_dbm.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/iwconfig_dbm.txt"));
         sessionMocker.withCommand("ls -1 /sys/class/net", new CommandMocker()
                 .withResponse("lo\nwlp2s0").mock());
         sessionMocker.withCommand("cat /sys/class/net/wlp2s0/carrier",

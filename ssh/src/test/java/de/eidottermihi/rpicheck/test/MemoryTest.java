@@ -39,7 +39,7 @@ public class MemoryTest extends AbstractMockedQueryTest {
     @Test
     public void memory() throws RaspiQueryException, IOException {
         String output = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/proc_meminfo.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/proc_meminfo.txt"));
         sessionMocker.withCommand(
                 MemoryQuery.MEMORY_INFO_CMD,
                 new CommandMocker().withResponse(output).mock());
@@ -61,7 +61,7 @@ public class MemoryTest extends AbstractMockedQueryTest {
     @Test
     public void memory_old_linux_kernel() throws RaspiQueryException, IOException {
         String output = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/proc_meminfo_old.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/proc_meminfo_old.txt"));
         sessionMocker.withCommand(
                 MemoryQuery.MEMORY_INFO_CMD,
                 new CommandMocker().withResponse(output).mock());
@@ -79,7 +79,7 @@ public class MemoryTest extends AbstractMockedQueryTest {
     @Test
     public void memory_unknown_ouput() throws RaspiQueryException, IOException {
         String output = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/proc_meminfo_error.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/proc_meminfo_error.txt"));
         sessionMocker.withCommand(
                 MemoryQuery.MEMORY_INFO_CMD,
                 new CommandMocker().withResponse(output).mock());

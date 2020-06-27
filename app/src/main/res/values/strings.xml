@@ -56,7 +56,7 @@
     <string name="last_update">Last refresh</string>
     <string name="no_device_available">Please add a Raspberry Pi first.</string>
     <string name="new_raspi_text">Enter your Raspberry Pi device information.</string>
-    <string name="ssh_port">SSH port</string>
+    <string name="ssh_port">Port</string>
     <string name="new_raspi_description">Additional description</string>
     <string name="new_raspi_description_hint">Add additional description here...</string>
     <string name="overclocking_header">Overclocking</string>

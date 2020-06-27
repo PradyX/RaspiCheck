@@ -23,8 +23,7 @@
     SOFTWARE.
 
 -->
-<ScrollView
-    android:id="@+id/scrollView1"
+<ScrollView android:id="@+id/scrollView1"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,10 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="4dp"
+        android:padding="16dp"
         android:showDividers="beginning|middle|end"
         tools:context=".NewRaspiActivity">
 
@@ -47,11 +43,13 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="wrap_content"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_marginEnd="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_raspi_host_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,11 +62,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
                 android:id="@+id/port_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_raspi_ssh_port_editText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,15 +92,17 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
                 android:text="@string/raspi_auth_keyfile_hint"
-                android:textAppearance="?android:attr/textAppearanceSmall"/>
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:textColor="@color/colorPrimary"
                 android:id="@+id/buttonKeyfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_key_file"
                 android:onClick="onButtonClick"
-                android:text="@string/raspi_auth_button_keyfile"/>
+                android:text="@string/raspi_auth_button_keyfile" />
 
             <CheckBox
                 android:id="@+id/checkboxAsk"
@@ -113,13 +114,14 @@
                 android:text="@string/raspi_key_checkbox_text"/>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
                 android:id="@+id/key_password_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/checkboxAsk"
                 android:visibility="gone">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/key_password_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,10 +139,11 @@
             android:paddingTop="8dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_raspi_sudoPass_editText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,7 +162,7 @@
             <Spinner
                 android:id="@+id/spinnerAuthMethod"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textAuthMethod" />
 
@@ -174,29 +177,33 @@
         </RelativeLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="8dp"
             android:id="@+id/ssh_password_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ssh_password_edit_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="@string/raspi_device_password_hint"
                 android:inputType="textPassword">
 
-            </EditText>
+            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_raspi_name_editText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="@string/raspi_device_name_hint"
                 android:inputType="text|textNoSuggestions"
@@ -204,34 +211,38 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_raspi_user_editText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_below="@+id/labelUser"
                 android:ems="10"
                 android:hint="@string/raspi_device_user_hint"
                 android:inputType="text|textNoSuggestions"
                 android:maxLines="1"
-                android:paddingTop="8dp" />
+                android:paddingTop="15dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edit_raspi_desc_editText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:hint="@string/new_raspi_description"
-                android:inputType="textMultiLine"
-                android:paddingTop="8dp" />
+                android:inputType="text|textNoSuggestions"
+                android:paddingTop="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

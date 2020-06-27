@@ -99,4 +99,9 @@
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+    </style>
+
 </resources>

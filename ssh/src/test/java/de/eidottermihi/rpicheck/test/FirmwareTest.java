@@ -28,7 +28,6 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import de.eidottermihi.rpicheck.ssh.LoadAveragePeriod;
 import de.eidottermihi.rpicheck.ssh.impl.RaspiQueryException;
 import de.eidottermihi.rpicheck.test.mocks.CommandMocker;
 
@@ -42,7 +41,7 @@ public class FirmwareTest extends AbstractMockedQueryTest {
     @Test
     public void firmware_hash() throws IOException, RaspiQueryException {
         String output = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/vcgencmd_version.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/vcgencmd_version.txt"));
         sessionMocker.withCommand("vcgencmd version",
                 new CommandMocker().withResponse(output).mock());
         String firmwareVersion = raspiQuery.queryFirmwareVersion("vcgencmd");
@@ -52,7 +51,7 @@ public class FirmwareTest extends AbstractMockedQueryTest {
     @Test
     public void firmware_old_format() throws IOException, RaspiQueryException {
         String output = FileUtils.readFileToString(FileUtils
-                .getFile("src/test/java/de/eidottermihi/rpicheck/test/vcgencmd_version_old.txt"));
+                .getFile("src/text_input_box_stroke/java/de/eidottermihi/rpicheck/text_input_box_stroke/vcgencmd_version_old.txt"));
         sessionMocker.withCommand("vcgencmd version",
                 new CommandMocker().withResponse(output).mock());
         String firmwareVersion = raspiQuery.queryFirmwareVersion("vcgencmd");

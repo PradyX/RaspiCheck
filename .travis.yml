@@ -44,8 +44,8 @@ before_install:
   - echo y | sdkmanager --no_https "platforms;android-28" >/dev/null # We need the API of the current compileSdkVersion from gradle.properties
 
   - export EMULATOR="system-images;android-${API};${EMU_FLAVOR};${ABI}" # Used to install/create emulator
-  - docker build -t rpicheck/test-sshd ./ssh/src/test/resources/
-  - docker run -d -p 127.0.0.1:2222:22 rpicheck/test-sshd
+  - docker build -t rpicheck/text_input_box_stroke-sshd ./ssh/src/text_input_box_stroke/resources/
+  - docker run -d -p 127.0.0.1:2222:22 rpicheck/text_input_box_stroke-sshd
 
 install:
   # List and delete unnecessary components to free space
@@ -67,7 +67,7 @@ install:
 
 before_script:
   # Create and start emulator
-  - echo no | avdmanager create avd --force -n test -k "$EMULATOR" -c 10M
+  - echo no | avdmanager create avd --force -n text_input_box_stroke -k "$EMULATOR" -c 10M
   - |
     EMU_PARAMS="-verbose -no-snapshot -no-window -camera-back none -camera-front none -selinux permissive -qemu -m 2048"
     EMU_COMMAND="emulator"
